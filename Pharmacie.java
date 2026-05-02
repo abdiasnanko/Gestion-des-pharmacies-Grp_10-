@@ -43,13 +43,11 @@ System.out.println ("===== PHARMACIE HADJA LATIFA ===== \n ");
     // ID Ibrahima 
     tab[4]= "Ibrahima";
     pass[4]= "449";
-
     System.out.print("Votre ID de connexion utilisateur: ");
     Scanner scanner = new Scanner(System.in);
         String id=scanner.nextLine();
     System.out.print("Votre Mot de passe utilisateur: ");
         String passwd=scanner.nextLine();
-
         int i=0;
         boolean success = false; 
 while (i<tab.length) {
@@ -64,10 +62,7 @@ while (i<tab.length) {
     //optionMenu();
       if (!success) {
             System.out.println("\n Identifiant ou mot de passe incorrect \n");
-        
           }
-
-
   }
 private static void passAdmin(){
     //section dediee aux ID Administrateurs
@@ -76,51 +71,36 @@ private static void passAdmin(){
     tabAdmin[0]= "Nanko";
     String [] passwdAdmin = new String[6];
     passwdAdmin[0]= "0421";
-
-    //continuation:
     System.out.print("Votre ID administrateur: ");
     Scanner scanner = new Scanner(System.in);
         String id=scanner.nextLine();
     System.out.print("Votre Mot de passe administrateur: ");
         String pwd=scanner.nextLine();
     int i=0;
-    //int tentative=3;
-
-
 while (i<tabAdmin.length) {
   if (tabAdmin[i] != null && passwdAdmin[i] != null) {
-          if ( tabAdmin[i].equals(id) && passwdAdmin[i].equals(pwd)) {
-            System.out.println("\n Bienvenue "+ tabAdmin[i]+"\n");
+      if ( tabAdmin[i].equals(id) && passwdAdmin[i].equals(pwd)) {
+        System.out.println("\n Bienvenue "+ tabAdmin[i]+"\n");
           horodatage();
           } }
-          i++; 
-          success=true;
+  i++; 
+      success=true;
         }
-          if (!success) {
-            System.out.println("\n Identifiant ou mot de passe incorrect \n"); 
-      
-          }
-        
+      if (!success) {
+        System.out.println("\n Identifiant ou mot de passe incorrect \n"); 
+      }     
   }
-
 private static  void menu(){
-
-
-
-}
-
-  public static void main (String [] args){
-    
-optionMenu();
-
 int exit =0;
     int confirmation;
     //boolean exit=false;
   Scanner scanner = new Scanner(System.in);
   int numero = scanner.nextInt();
-
+  if (numero>=3) {
+    System.out.println(" Erreur ! Faites un choix valide ! [0-2] \n ");  
+        optionMenu();
+  }
   do{   
-    
   switch (numero) {
     case 1:
           System.out.println ("\n   ===== PHARMACIE HADJA LATIFA ===== ");
@@ -138,18 +118,17 @@ int exit =0;
       confirmation = scanner.nextInt();
 if (confirmation==1) {
   System.out.println("Au revoir !\n ");
-  //exit=true;
 } else if (confirmation==2) {
   optionMenu();
-  //exit=false;
 }
       break;
-      default:
-        System.out.println(" Erreur ! Faites un choix valide ! [0-2] \n ");  
-        optionMenu();
+      default:    
         break;
   }
-
   } while(exit!=0);
 }
+  public static void main (String [] args){ 
+optionMenu();
+menu();
+  }
 }
