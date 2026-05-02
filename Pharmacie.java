@@ -103,9 +103,9 @@ int exit =0;
   do{   
   switch (numero) {
     case 1:
-          System.out.println ("\n   ===== PHARMACIE HADJA LATIFA ===== ");
-          System.out.println("\n=====CONNEXION EN TANT QU'UTILISATEUR=====\n ");
-          passUser();
+    System.out.println("\n===== CONNEXION EN TANT QU'UTILISATEUR =====\n");
+    passUser();
+    Patient.menuPatient(); // ← AJOUTE CETTE LIGNE
       break;
     case 2: 
           System.out.println ("\n     ===== PHARMACIE HADJA LATIFA ===== ");
