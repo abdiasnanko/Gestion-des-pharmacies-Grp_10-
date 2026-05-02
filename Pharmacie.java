@@ -4,17 +4,13 @@ import java.util.Scanner;
 
 public class Pharmacie {
 
-
   private static void optionMenu(){
-
 System.out.println ("===== PHARMACIE HADJA LATIFA ===== \n ");
   System.out.println("1. Connexion en tant qu'utilisateur \n ");
   System.out.println("2. Connexion en tant qu'administrateur \n ");
   System.out.println("0. Quitter l'application \n");
   System.out.print("Faites votre choix: ");
-
   }
-
   private static void horodatage(){
     LocalDateTime maintenant = LocalDateTime.now();
         DateTimeFormatter formatComplet = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
@@ -38,7 +34,7 @@ System.out.println ("===== PHARMACIE HADJA LATIFA ===== \n ");
 
     // ID Ndam
     tab[3]= "Ndam";
-    pass[3]= "0499";
+    pass[3]= "0498";
 
     // ID Ibrahima 
     tab[4]= "Ibrahima";
@@ -59,7 +55,6 @@ while (i<tab.length) {
     } }
       i++;   
     } 
-    //optionMenu();
       if (!success) {
             System.out.println("\n Identifiant ou mot de passe incorrect \n");
           }
@@ -104,17 +99,16 @@ int exit =0;
   switch (numero) {
     case 1:
           System.out.println ("\n   ===== PHARMACIE HADJA LATIFA ===== ");
-          System.out.println("\n=====CONNEXION EN TANT QU'UTILISATEUR=====\n ");
+          System.out.println("\n===== CONNEXION EN TANT QU'UTILISATEUR =====\n ");
           passUser();
       break;
     case 2: 
           System.out.println ("\n     ===== PHARMACIE HADJA LATIFA ===== ");
-          System.out.println("\n=====CONNEXION EN TANT QU'ADMINISTRATEUR=====\n ");
+          System.out.println("\n===== CONNEXION EN TANT QU'ADMINISTRATEUR =====\n ");
           passAdmin();
       break;
       case 0: 
     System.out.print(" Voulez vous vraiment quitter ? \n 1. Oui \n 2. Non \n veuillez confirmer: ");
-//Scanner scanner = new Scanner(System.in);
       confirmation = scanner.nextInt();
 if (confirmation==1) {
   System.out.println("Au revoir !\n ");
