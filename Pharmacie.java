@@ -4,6 +4,17 @@ import java.util.Scanner;
 
 public class Pharmacie {
 
+
+  private static void optionMenu(){
+
+System.out.println ("===== PHARMACIE HADJA LATIFA ===== \n ");
+  System.out.println("1. Connexion en tant qu'utilisateur \n ");
+  System.out.println("2. Connexion en tant qu'administrateur \n ");
+  System.out.println("0. Quitter l'application \n");
+  System.out.print("Faites votre choix: ");
+
+  }
+
   private static void horodatage(){
     LocalDateTime maintenant = LocalDateTime.now();
         DateTimeFormatter formatComplet = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
@@ -91,17 +102,25 @@ while (i<tabAdmin.length) {
           }
         
   }
+
+private static  void menu(){
+
+
+
+}
+
   public static void main (String [] args){
-    int exit =0;
-  do{   
-    System.out.println ("===== PHARMACIE HADJA LATIFA ===== \n ");
-  System.out.println("1. Connexion en tant qu'utilisateur \n ");
-  System.out.println("2. Connexion en tant qu'administrateur \n ");
-  System.out.println("0. Quitter l'application \n");
-  System.out.print("Faites votre choix: ");
+    
+optionMenu();
+
+int exit =0;
+    int confirmation;
+    //boolean exit=false;
   Scanner scanner = new Scanner(System.in);
   int numero = scanner.nextInt();
-  
+
+  do{   
+    
   switch (numero) {
     case 1:
           System.out.println ("\n   ===== PHARMACIE HADJA LATIFA ===== ");
@@ -113,15 +132,24 @@ while (i<tabAdmin.length) {
           System.out.println("\n=====CONNEXION EN TANT QU'ADMINISTRATEUR=====\n ");
           passAdmin();
       break;
-    case 0: 
-            System.out.println("Au revoir !\n ");  
+      case 0: 
+    System.out.print(" Voulez vous vraiment quitter ? \n 1. Oui \n 2. Non \n veuillez confirmer: ");
+//Scanner scanner = new Scanner(System.in);
+      confirmation = scanner.nextInt();
+if (confirmation==1) {
+  System.out.println("Au revoir !\n ");
+  //exit=true;
+} else if (confirmation==2) {
+  optionMenu();
+  //exit=false;
+}
       break;
-    default:
-      if (numero>=3){
-        System.out.println(" Erreur ! Faites un choix valide ! [0-2]");
-      }
-      break;
+      default:
+        System.out.println(" Erreur ! Faites un choix valide ! [0-2] \n ");  
+        optionMenu();
+        break;
   }
+
   } while(exit!=0);
 }
 }
