@@ -99,7 +99,7 @@ int exit =0;
   switch (numero) {
     case 1:
           System.out.println ("\n   ===== PHARMACIE HADJA LATIFA ===== ");
-          System.out.println("\n===== CONNEXION EN TANT QU'UTILISATEUR =====\n ");
+          System.out.println("\n=====CONNEXION EN TANT QU'UTILISATEUR=====\n ");
           passUser();
       break;
     case 2: 
