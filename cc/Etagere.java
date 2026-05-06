@@ -16,7 +16,6 @@ public class Etagere {
     public void setNumeroEtagere(int n)       { this.numeroEtagere  = n; }
     public void setTypeTraitement(String t)   { this.typeTraitement = t; }
 
-    @Override
     public String toString() {
         return "Étagère N°" + numeroEtagere + " | Type de traitement: " + typeTraitement;
     }
