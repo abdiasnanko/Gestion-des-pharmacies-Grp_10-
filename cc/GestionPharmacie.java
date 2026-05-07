@@ -8,11 +8,9 @@ public class GestionPharmacie {
     private ArrayList<Medicament>  medicaments  = new ArrayList<>();
     private ArrayList<Etagere>     etageres     = new ArrayList<>();
     private ArrayList<Facture>     factures     = new ArrayList<>();
-    private ArrayList<Ordonnance>  ordonnances  = new ArrayList<>();
 
     private int nextIdPharmacien  = 1;
     private int nextIdMedicament  = 1;
-    private int nextNumOrdonnance = 1;
 
     // ==================== PHARMACIENS ====================
 
@@ -102,7 +100,7 @@ public class GestionPharmacie {
         System.out.println("Date : " + LocalDateTime.now().format(fmt));
         System.out.println("--------------------------------------------");
         for (Medicament m : medicaments) {
-            System.out.println("ID: " + m.getId() + " | Nom: " + m.getNom() + " | Forme: " + m.getFormeGalenique() + " | Etagere N : " + m.getNumeroEtagere() + " | Qte initiale: " + m.getQuantiteInitiale() + " | Qte restante: " + m.getQuantite());
+            System.out.println("ID: " + m.getId() + " | Nom: " + m.getNom() +" | Forme: " + m.getFormeGalenique() + " | Etagere N : " + m.getNumeroEtagere() + " | Qte initiale: " + m.getQuantiteInitiale() + " | Qte restante: " + m.getQuantite());
         }
         System.out.println("--------------------------------------------");
         System.out.println("Total references en stock : " + medicaments.size() + " medicament(s).");
@@ -210,27 +208,5 @@ public class GestionPharmacie {
             totalGeneral += f.getTotal();
         }
         System.out.println("TOTAL GENERAL TOUTES FACTURES : " + totalGeneral + " FCFA");
-    }
-
-    // ==================== ORDONNANCES ====================
-
-    public void ajouterOrdonnance(Ordonnance o) {
-        o.setNumeroOrdonnance(nextNumOrdonnance++);
-        ordonnances.add(o);
-        System.out.println("\n Ordonnance enregistree !");
-        System.out.println(o);
-    }
-
-    public void afficherOrdonnances() {
-        if (ordonnances.isEmpty()) {
-            System.out.println("\n  Aucune ordonnance enregistree.");
-            return;
-        }
-        DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
-        System.out.println("\n========== LISTE DES ORDONNANCES ==========");
-        System.out.println("Date : " + LocalDateTime.now().format(fmt));
-        System.out.println("--------------------------------------------");
-        for (Ordonnance o : ordonnances) System.out.println(o);
-        System.out.println("Total : " + ordonnances.size() + " ordonnance(s).");
     }
 }

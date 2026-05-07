@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Facture {
 
     private int numeroFacture;
-    private String dateVente;
+    private String  dateVente;
     private ArrayList<LigneFacture> lignes;
 
     private static int compteur = 1;
@@ -14,7 +14,7 @@ public class Facture {
         this.numeroFacture = compteur++;
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
         this.dateVente = LocalDateTime.now().format(fmt);
-        this.lignes    = new ArrayList<>();
+        this.lignes = new ArrayList<>();
     }
 
     public Facture(String nomMedicament, int quantite, double prixUnitaire) {
@@ -33,7 +33,7 @@ public class Facture {
     }
 
     public int getNumeroFacture() { return numeroFacture; }
-    public String getDateVente()     { return dateVente; }
+    public String getDateVente() { return dateVente; }
     public ArrayList<LigneFacture> getLignes() { return lignes; }
 
     public String toString() {
