@@ -24,7 +24,7 @@ public class Pharmacie {
     tab[0]= "Olle";    pass[0]= "0499";
     tab[1]= "Nana";    pass[1]= "0500";
     tab[2]= "Nadia";   pass[2]= "0438";
-    tab[3]= "Ndam";    pass[3]= "0499";
+    tab[3]= "Ndam";    pass[3]= "0498";
     tab[4]= "Ibrahima";pass[4]= "449";
 
     System.out.print("Votre ID de connexion utilisateur: ");
@@ -71,7 +71,7 @@ public class Pharmacie {
           System.out.println("\n Bienvenue "+ tabAdmin[i]+"\n");
           horodatage();
           success = true;
-          MenuAdmin.afficher();
+          MenuAdmin.afficher(tabAdmin[i]);
         }
       }
       i++;
@@ -84,7 +84,6 @@ public class Pharmacie {
   private static void menu(){
     int confirmation;
     Scanner scanner = new Scanner(System.in);
-
     boolean continuer = true;
     while (continuer) {
       optionMenu();
