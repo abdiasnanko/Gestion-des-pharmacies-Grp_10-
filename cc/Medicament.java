@@ -39,6 +39,6 @@ public class Medicament {
     }
 
     public String toString() {
-        return "ID: " + id + " | Nom: " + nom + " | Forme galenique: " + formeGalenique + " | Etagere N : "  + numeroEtagere + " | Prix: " + prix + " FCFA" + " | Qte initiale: " + quantiteInitiale +0 " | Qte restante: " + quantiteRestante;
+        return "ID: " + id + " | Nom: " + nom + " | Forme galenique: " + formeGalenique + " | Etagere N : "  + numeroEtagere + " | Prix: " + prix + " FCFA" + " | Qte initiale: " + quantiteInitiale + " | Qte restante: " + quantiteRestante;
     }
 }
