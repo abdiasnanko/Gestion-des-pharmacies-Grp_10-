@@ -208,7 +208,7 @@ public class MenuUser {
         while (true) {
             try { return Integer.parseInt(sc.nextLine().trim()); }
             catch (NumberFormatException e) {
-                System.out.print(" Entree vide, entrez un nombre: ");
+                System.out.print(" Entree vide, entrer un nombre: ");
             }
         }
     }

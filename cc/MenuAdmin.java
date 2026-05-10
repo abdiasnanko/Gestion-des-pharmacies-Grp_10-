@@ -225,7 +225,7 @@ public class MenuAdmin {
         while (true) {
             try { return Integer.parseInt(sc.nextLine().trim()); }
             catch (NumberFormatException e) {
-                System.out.print(" Entree invalide, entrez un nombre: ");
+                System.out.print(" Entree invalide, entrez la donnée souhaitée: ");
             }
         }
     }
@@ -234,7 +234,7 @@ public class MenuAdmin {
         while (true) {
             try { return Double.parseDouble(sc.nextLine().trim()); }
             catch (NumberFormatException e) {
-                System.out.print(" Entree invalide, entrez un nombre: ");
+                System.out.print(" Entree invalide, entrez la donnée souhaitée: ");
             }
         }
     }
